@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="KolmasProjekt.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KolmasProjekt"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <TextBlock FontSize="20" Text="Sisestage parool!" TextAlignment="Center"></TextBlock>
+            <TextBox  PlaceholderText="Username" x:Name="textbox1" Margin="50,50" VerticalAlignment="Center"></TextBox>
+            <PasswordBox PlaceholderText="Password" x:Name="passwordbox" Margin="50,0" VerticalAlignment="Center"></PasswordBox>
+            <Button x:Name="signinbtn" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,0,0" Click="signinbtn_Click" PointerEntered="signinbtn_PointerEntered" PointerExited="signinbtn_PointerExited">
+                <Button.Projection>
+                    <PlaneProjection x:Name="btnrotation" RotationX="5" RotationZ="150" RotationY="9"/>
+                </Button.Projection> Sign in
+            </Button>
+            <TextBlock x:Name="errortext" FontSize="20" Text="" TextAlignment="Center" Margin="0,27,0,0"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
